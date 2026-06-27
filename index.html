@@ -1,0 +1,107 @@
+version: "3.9"
+
+services:
+
+  webprofile:
+
+    build: .
+
+    container_name: web-profile-dayana
+
+    ports:
+      - "8084:80"
+
+    restart: always
+root@danama:/opt/dayana/251572010020-DayanaWeb# cat Dockerfile
+FROM nginx:alpine
+
+COPY index.html /usr/share/nginx/html/
+COPY style.css /usr/share/nginx/html/
+
+EXPOSE 80
+root@danama:/opt/dayana/251572010020-DayanaWeb# cat index.html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Profile Dayana Maya Lestari</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>👩‍💻 Web Profile Mahasiswa</h1>
+        <p>Selamat Datang di Website Profil Saya</p>
+    </header>
+
+    <section>
+        <h2>📌 Identitas Umum</h2>
+
+        <table>
+            <tr>
+                <td><b>Nama</b></td>
+                <td>Dayana Maya Lestari</td>
+            </tr>
+
+            <tr>
+                <td><b>Program Studi</b></td>
+                <td>Sistem Informasi</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>💻 Alasan Memilih Jurusan Sistem Informasi</h2>
+
+        <p>
+            Saya memilih jurusan Sistem Informasi karena tertarik dengan dunia
+            teknologi dan ingin memahami bagaimana teknologi dapat digunakan
+            untuk membantu aktivitas manusia maupun perusahaan melalui
+            pengembangan sistem informasi yang efektif.
+        </p>
+    </section>
+
+    <section>
+        <h2>🚀 Motivasi Belajar Teknologi</h2>
+
+        <p>
+            Motivasi saya adalah terus mengikuti perkembangan teknologi,
+            meningkatkan kemampuan di bidang pemrograman, cloud computing,
+            database, dan Internet of Things agar mampu bersaing di dunia kerja.
+        </p>
+    </section>
+
+    <section>
+        <h2>❤️ Minat di Bidang IT</h2>
+
+        <ul>
+            <li>Web Development</li>
+            <li>Cloud Computing</li>
+            <li>Internet of Things (IoT)</li>
+            <li>Database</li>
+            <li>UI/UX Design</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>🎯 Cita-cita dan Tujuan Karir</h2>
+
+        <p>
+            Saya bercita-cita menjadi seorang Software Engineer yang mampu
+            membangun aplikasi berbasis web maupun cloud yang dapat memberikan
+            manfaat bagi masyarakat serta terus mengembangkan kemampuan di
+            bidang teknologi.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Dayana Maya Lestari | Sistem Informasi</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
