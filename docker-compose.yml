@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+
+  webprofile:
+
+    build: .
+
+    container_name: web-profile-dayana
+
+    ports:
+      - "8084:80"
+
+    restart: always
